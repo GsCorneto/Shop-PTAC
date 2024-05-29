@@ -1,0 +1,21 @@
+
+.card{
+    display: flex;
+    width: 400px ;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(7, 126, 126)
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    gap: 50px;
+}
