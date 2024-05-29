@@ -14,9 +14,6 @@ export default async function Main(){
          height={300} 
          src={produto.image}/>
          <p>R${produto.price}</p>
-         <p>{produto.category
-         
-         }</p>
        </div>
       )}
   </main>
