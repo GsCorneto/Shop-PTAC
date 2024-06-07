@@ -1,5 +1,6 @@
 import styles from "./comps.module.css"
 import Image from "next/image";
+import Footer  from "./Footer";
 export default async function Main(){
   const response = await fetch ("https://fakestoreapi.com/products/")
   const data = await response.json();
@@ -9,14 +10,16 @@ export default async function Main(){
       
       {data.map((produto)=> 
        <div className={styles.card} key={produto.id}>
-         <p>{produto.title.slice(0,12)+ "..."}</p>
+         <p className={styles.titulo}>{produto.title.slice(0,13)+ "..."}</p>
          <Image width={300} 
          height={300} 
          src={produto.image}/>
          <p>R${produto.price}</p>
+         <p className={styles.desc}>{produto.description.slice(0,10)+ "...Ler Mais"}</p>
        </div>
       )}
+      <Footer/>
   </main>
-
+     
     )
 }
