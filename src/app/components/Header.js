@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./comps.module.css";
-import Main from "./Main";
+
 export default function Header(){
     return(
 

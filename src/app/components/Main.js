@@ -10,12 +10,15 @@ export default async function Main(){
       
       {data.map((produto)=> 
        <div className={styles.card} key={produto.id}>
-         <p className={styles.titulo}>{produto.title.slice(0,13)+ "..."}</p>
-         <Image width={300} 
+         <p  className={styles.titulo}>{produto.title.slice(0,13)+ "..."}</p>
+         <Image 
+         abbr title={produto.category}
+         width={300} 
          height={300} 
          src={produto.image}/>
          <p>R${produto.price}</p>
          <p className={styles.desc}>{produto.description.slice(0,10)+ "...Ler Mais"}</p>
+         
        </div>
       )}
       <Footer/>

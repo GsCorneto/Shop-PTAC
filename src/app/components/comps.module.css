@@ -26,13 +26,16 @@
 
 .footer{
     font-size: 22px;
-    background-color: #ADEEE3;
+    background-color: #8f2366;
     padding: 10px 40px;
     width: 100%;
-    height:100px;
+    height: 200px;
     align-items: center;
     display: flex;
     flex-direction: row;
+    display: flex;
+    text-align: center;
+    position: sticky;
 }
 
 .butao{
