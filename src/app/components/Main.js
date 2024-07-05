@@ -5,7 +5,7 @@ import Footer  from "./Footer";
 import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import ErrorFetch from "./ErrorFetch";
-
+import Link from "next/link";
 export default function Main(){
 
   const [listaProd, setListaP] = useState([]);
@@ -106,7 +106,9 @@ export default function Main(){
          src={produto.image}/>
          <p>R${produto.price}</p>
          <p className={styles.desc}>{produto.description.slice(0,10)+ "...Ler Mais"}</p>
-         
+         <Link href={"/produto/" + produto.id}>
+           <button>Ver Mais</button>
+         </Link>
        </div>
       )}
       <Footer/>
